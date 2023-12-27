@@ -13,8 +13,18 @@ const productos = [
 
 ]
 
+const usuarios = [
+    {id: 1, nombre: "Carlos"},
+    {id: 2, nombre: "Juan"},
+
+]
+
 app.get("/api/v1/productos", (req, res) => {
     res.json({productos});
+});
+
+app.get("/api/v1/usuarios", (req, res) => {
+    res.json({usuarios});
 });
 
 app.all("*", (req, res) => {
