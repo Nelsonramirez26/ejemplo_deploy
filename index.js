@@ -17,7 +17,11 @@ const usuarios = [
     {id: 1, nombre: "Carlos"},
     {id: 2, nombre: "Juan"},
 
-]
+];
+
+app.get("/", (req, res) => {
+    res.send("<h1>Página principal</h1>")
+});
 
 app.get("/api/v1/productos", (req, res) => {
     res.json({productos});
